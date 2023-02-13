@@ -90,6 +90,7 @@ class Driver:
         return self.driver.find_element(By.XPATH, xpath)
 
     def seleniumClick(self, element):
+        randomSleep()
         order_tries = 0
         while order_tries < 3:
             try:
@@ -110,6 +111,7 @@ class Driver:
             entrybox (): _description_
             send_keys_arg (_type_): _description_
         """
+        randomSleep()
         order_tries = 0
         no_error = False
         while not no_error:
@@ -131,9 +133,16 @@ class Driver:
         """
         return self.driver.current_url
 
+def randomSleep():
+    """
+    Sleep for a random time.
+    """
+    time.sleep(random.random()/10**2)
+
 #------------------------------------------------------------------------------#
 
 if __name__ == "__main__":
     driver = Driver(show=True)
     driver.goTo("https://bandcamp.com")
     driver.getElement('//*[@id="header-wrapper"]/div[1]/div[1]/div[1]/h2/a').click()
+    
