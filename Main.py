@@ -13,7 +13,6 @@ It allows you to download all the albums of a band.
 #------------------------------------------------------------------------------#
 
 from MacroScrapper import MacroScrapper
-#from MarcoScrapper import MarcoScrapperGUI
 
 #------------------------------------------------------------------------------#
 
