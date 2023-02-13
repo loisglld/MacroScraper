@@ -9,6 +9,8 @@ Python web scrapper for Bandcamp music.
 * How to contribute?
 * License
 
+---
+
 ## What is MacroScrapper?
 
 MacroScrapper is a web scrapper for Bandcamp music. It is a Python script that will download all the music from a Bandcamp artist page.
@@ -27,5 +29,12 @@ MacroScrapper is a web scrapper for Bandcamp music. It is a Python script that w
 ### Usage
 
 * Run the script with `python main.py`
-* Enter the URL of the artist page
+* Enter the name of the artist.
 * Wait for the script to finish
+
+## How to contribute?
+
+MacroScrapper . I welcome both pull requests and issues on [GitHub](https://github.com/LOISGALLAUD/MacroScrapper). I will review your pull request as soon as possible.
+
+## License
+
