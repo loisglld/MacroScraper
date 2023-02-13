@@ -2,12 +2,16 @@
 
 ## **Table of content**
 
-* What is MacroScrapper?
-* Where does it come from?
-* How does it work?
-* How to use it?
-* How to contribute?
-* License
+* [What is MacroScrapper?](#what-is-macroscrapper)
+* [Where does it come from?](#where-does-it-come-from)
+* [How does it work?](#how-does-it-work)
+  * [Directory structure](#directory-structure)
+* [How to use it?](#how-to-use-it)
+  * [Requirements](#requirements)
+  * [Installation](#installation)
+  * [Usage](#usage)
+* [How to contribute?](#how-to-contribute)
+* [License](#license)
 
 ## **What is MacroScrapper?**
 
