@@ -13,6 +13,8 @@
 * [How to contribute?](#how-to-contribute)
 * [License](#license)
 
+---
+
 ## **What is MacroScrapper?**
 
 MacroScrapper is a web scrapper for Bandcamp music. It is a Python script that will download all the music from a Bandcamp artist page, album after album, in your Music directory.
@@ -46,7 +48,7 @@ It will also create a ``.txt`` file with the name of the artist and the name of 
 * Artist name
 * Album tracklist
 
-The project will download the music in yout Music folder. It will create a folder named MacroScrapper and then create a folder named after the artist's name. The folder will contain all the albums downloaded as zip files and the ``.csv`` and ``.txt`` files.
+The project will download the music in yout Music folder. It will create a folder named MacroScrapper and then create a folder named after the artist's name. The folder will contain all the albums downloaded as zip files, the ``.csv`` and ``.txt`` files.
 
 ### **Directory structure**
 
@@ -67,11 +69,18 @@ Music
     |___ ...
 ```
 
+---
+
 ## How to use it?
+
+This script will ask you to enter the artist name's album you want to download.
+It is planned to make a GUI for the script. For now, it is a command line script.
+
+Just let it do the job.
 
 ### Requirements
 
-Python verion 3.11.1 or higher is required.
+Python version 3.11.1 or higher is required.
 
 Requirements are detailed in the ``requirements.txt`` file. You will need:
 
@@ -79,6 +88,8 @@ Requirements are detailed in the ``requirements.txt`` file. You will need:
 * selenium
 * requests
 * pandas
+
+In future versions, I will make a ``.exe`` file so you won't need to install Python.
 
 ### Installation
 
@@ -90,10 +101,15 @@ Requirements are detailed in the ``requirements.txt`` file. You will need:
 * Run the script with `python main.py`
 * Enter the name of the artist in the terminal.
 * Wait for the script to finish.
+* Retrieve the music in your Music folder.
+
+---
 
 ## How to contribute?
 
-[I](https://github.com/LOISGALLAUD) develop the MacroScrapper alone. I welcome both pull requests and issues on [GitHub](https://github.com/LOISGALLAUD/MacroScrapper). I will review your pull request as soon as possible.
+I develop the MacroScrapper alone ([see more of my stuff](https://github.com/LOISGALLAUD)). I welcome both pull requests and issues on [GitHub](https://github.com/LOISGALLAUD/MacroScrapper). I will review your pull request as soon as possible.
+
+---
 
 ## License
 
