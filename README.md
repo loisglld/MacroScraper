@@ -38,4 +38,4 @@ MacroScrapper . I welcome both pull requests and issues on [GitHub](https://gith
 
 ## License
 
-MacroScrapper is licensed under the [Apashe 2.0 License](
+MacroScrapper is licensed under the [Apashe 2.0 License].
