@@ -26,7 +26,7 @@ Requirements are detailed in the ``requirements.txt`` file. You will need:
 * webdriver-manager
 * selenium
 * requests
-* Pip
+* pandas
 
 ### Installation
 
