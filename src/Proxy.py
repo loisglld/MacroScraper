@@ -15,7 +15,6 @@ from Identity import Identity
 
 import requests
 import pandas as pd
-import logging
 
 #------------------------------------------------------------------------------#
 

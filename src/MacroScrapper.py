@@ -12,8 +12,9 @@ This scripts contains the MarcoScrapper class.
 
 
 from Proxy import Proxy
-from Driver import *
+from Driver import Driver
 from WD import WorkingDirectory
+from Logs import Logs
 from selenium.webdriver.common.keys import Keys
 
 import os
@@ -21,11 +22,11 @@ import codecs
 from zipfile import ZipFile 
 import shutil
 import time
-import datetime
 
 #------------------------------------------------------------------------------#
 
 class MacroScrapper:
+    version = "0.2.0"
     def __init__(self):
         """
         Constructor of the MacroScrapper class.
@@ -33,13 +34,19 @@ class MacroScrapper:
         self.artist_name = input("IL EST IMPORTANT D'ECRIRE EXACTEMENT LE NOM DE L'ARTISTE\nEntrez le nom de l'artiste: ")
         
         self.WD = WorkingDirectory()
+        self.logs = Logs()
         self.proxies = Proxy()
         self.driver = Driver(self.proxies.proxies[0], show=True)
+        
+        self.logs.log.info(f"The MacroScrapper {MacroScrapper.version} has been launched.")
         
     def start(self):
         """
         This function starts the scrapping.
         """
+        self.logs.log.info("The scrapping has started.")
+        self.logs.log.info("The artist name is: " + self.artist_name)
+        
         self.WD.createArtistDir(self.artist_name)
         self.WD.createZipDir(self.artist_name)
         
@@ -59,12 +66,15 @@ class MacroScrapper:
         self.artist_name = self.driver.getElement('//*[@id="band-name-location"]/span[1]').text      
         # Stock the albums in a text file
         self.stockAlbums()
-        print("Albums stockés")
+        self.logs.log.info("The albums have been stocked.")
         for i in range(len(self.album_list)):
             album_name = self.album_list[i].strip()
             self.goToAlbumPage(i)
             self.WD.createAlbumDir(self.artist_name, album_name)
             self.downloadAlbum(album_name, i)
+            self.logs.log.info(f"{album_name} has been downloaded.")
+        
+        self.logs.refreshLogs()
     
     def stockAlbums(self):
         """
