@@ -12,8 +12,9 @@ This scripts contains the MarcoScrapper class.
 
 
 from Proxy import Proxy
-from Driver import *
+from Driver import Driver
 from WD import WorkingDirectory
+from Logs import Logs
 from selenium.webdriver.common.keys import Keys
 
 import os
@@ -21,7 +22,6 @@ import codecs
 from zipfile import ZipFile 
 import shutil
 import time
-import datetime
 
 #------------------------------------------------------------------------------#
 
@@ -33,8 +33,11 @@ class MacroScrapper:
         self.artist_name = input("IL EST IMPORTANT D'ECRIRE EXACTEMENT LE NOM DE L'ARTISTE\nEntrez le nom de l'artiste: ")
         
         self.WD = WorkingDirectory()
-        self.proxies = Proxy()
-        self.driver = Driver(self.proxies.proxies[0], show=True)
+        self.logs = Logs()
+        self.logs.log.info("The MacroScrapper has been launched.")
+        self.logs.refreshLogs()
+        """self.proxies = Proxy()
+        self.driver = Driver(self.proxies.proxies[0], show=True)"""
         
     def start(self):
         """
@@ -65,6 +68,8 @@ class MacroScrapper:
             self.goToAlbumPage(i)
             self.WD.createAlbumDir(self.artist_name, album_name)
             self.downloadAlbum(album_name, i)
+        
+        self.logs.refreshLogs()
     
     def stockAlbums(self):
         """
