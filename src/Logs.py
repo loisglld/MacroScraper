@@ -25,11 +25,7 @@ class Logs:
         
         Crée un fichier MacroLogs.log dans lequel se trouvera un
         historique des actions réalisées lors de la session.
-        """     
-        if not os.path.exists("../logs/"):
-            os.makedirs("../logs/")
-            print("The logs folder has been created.")
-        print("The logs folder already exists.")
+        """
         
         self.logLevel = logging.INFO # Configure log error level
         self.logName = "MacroLogs"
@@ -37,6 +33,12 @@ class Logs:
         self.logDateFormat = "%Y-%m-%d %I:%M:%S"
         self.logOutPath = os.path.dirname(os.path.abspath(os.path.dirname(__file__))) + "\\logs\\" # Path of the log file
         self.logPath = os.path.join(self.logOutPath, self.logName + ".log")
+
+        if not os.path.exists(self.logOutPath):
+            os.makedirs(self.logOutPath)
+            print("The logs folder has been created.")
+        else: 
+            print("The logs folder already exists.")
 
         # Delete the latest log file and create a new one to avoid conflict between the .log file
         try:
