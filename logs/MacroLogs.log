@@ -1,1 +1,3 @@
-2023-02-14 03:08:06 - MacroLogs - INFO - The MacroScrapper has been launched.
+2023-02-14 03:22:47 - WDM - INFO - ====== WebDriver manager ======
+2023-02-14 03:22:47 - WDM - INFO - Get LATEST chromedriver version for google-chrome 109.0.5414
+2023-02-14 03:22:48 - WDM - INFO - Driver [C:\Users\loisg\.wdm\drivers\chromedriver\win32\109.0.5414\chromedriver.exe] found in cache

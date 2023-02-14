@@ -31,7 +31,7 @@ class Logs:
             print("The logs folder has been created.")
         print("The logs folder already exists.")
         
-        self.logLevel = logging.DEBUG # Configure log error level
+        self.logLevel = logging.INFO # Configure log error level
         self.logName = "MacroLogs"
         self.logFormat = "%(asctime)s - %(name)s - %(levelname)s - %(message)s" # Display format in the log
         self.logDateFormat = "%Y-%m-%d %I:%M:%S"
@@ -41,7 +41,7 @@ class Logs:
         # Delete the latest log file and create a new one to avoid conflict between the .log file
         try:
             os.remove(self.logPath)
-        except OSError as e:
+        except OSError:
             pass
         
         self.log = logging.getLogger(self.logName)
