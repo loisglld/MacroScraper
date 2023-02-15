@@ -32,7 +32,7 @@ class Proxy:
 
         self.bandcamp_url = "https://bandcamp.com/"
         self.url = "https://free-proxy-list.net/"
-        self.proxies = self.is_proxies_safe(self.get_good_proxies(2))
+        self.proxies = self.is_proxies_safe(self.get_good_proxies(1))
 
     def proxiesInit(self):
         """

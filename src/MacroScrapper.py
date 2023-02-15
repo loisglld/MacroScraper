@@ -10,7 +10,6 @@ This scripts contains the MarcoScrapper class.
 
 #------------------------------------------------------------------------------#
 
-
 from Proxy import Proxy
 from Driver import Driver
 from WD import WorkingDirectory
