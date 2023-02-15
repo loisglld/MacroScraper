@@ -36,7 +36,7 @@ class Proxy:
 
     def proxiesInit(self):
         """
-        Initialize the list of proxies.
+        Initialize the list of proxies. 
         """
 
         # Get the proxies into a DataFrame
@@ -54,7 +54,6 @@ class Proxy:
 
         If the proxy is good, it will be added to the list of good proxies.
         
-
         Args:
             amount_of_proxies (int): amount of proxies the user wants to test.
 
@@ -72,7 +71,6 @@ class Proxy:
                 print(f"PROXY {proxy_url} OK.")
             except Exception:
                 print(f"PROXY {proxy_url} KO.")
-                #logging.exception("PROXY KO.")
                 pass
 
             # Stop looking for proxies if there is enough proxies
@@ -128,11 +126,10 @@ class Proxy:
         """
         try:
             # Get the IP adress of the user
-            IP = driver.getIPAdress()
-            assert IP != self.computerIP
-            print("L'IP utilisateur couverte.")
+            assert driver.getIPAdress() != self.computerIP
+            print("IP is safe.")
         except:
-            print("L'adresse IP n'a pas été changée..\nPasse au proxy suivant.\n")
+            print("IP isn't safe..\nOn to the next proxy.\n")
             return False
         return True
 

@@ -3,7 +3,7 @@
 """
 WD.py
 
-Created on 2023-02-03
+Created on 2023-02-04
 Author: Loïs GALLAUD
 This scripts contains the WorkingDirectory class.
 """

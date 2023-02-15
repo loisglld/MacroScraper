@@ -13,17 +13,16 @@ This scripts contains the Driver class.
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
 from fake_useragent import UserAgent
 
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import *
-from selenium.webdriver.common.keys import Keys
 
 import time
 import random
+import logging
 
 #------------------------------------------------------------------------------#
 
@@ -45,6 +44,7 @@ class Driver:
         self.chrome_options.add_experimental_option("excludeSwitches", ["enable-logging", "enable-automation"])
         self.chrome_options.add_experimental_option("useAutomationExtension", False)
         self.chrome_options.add_experimental_option("detach", True)
+        self.chrome_options.add_argument('--log-level=3') # Clean Logs from webdriver_manager info messages
         self.chrome_options.add_argument("--disable-blink-features=AutomationControlled")
         if proxy:
             self.chrome_options.add_argument(f'--proxy-server={proxy}')
@@ -57,39 +57,52 @@ class Driver:
 
     def getUserAgent(self):
         """
-        Return the user-agent of the user.
+        Returns the user-agent of the user.
         """
         self.driver.get("https://httpbin.org/user-agent")
         return self.driver.find_element(by = By.XPATH, value = '/html/body/pre').text
 
     def getIPAdress(self):
         """
-        Return the IP adress of the user.
+        Returns the IP adress of the user.
         """
         self.driver.get("https://httpbin.org/ip")
         return self.driver.find_element(by = By.XPATH, value = '/html/body/pre').text
 
     def goTo(self, url):
         """
-        Go to the given URL.
+        Goes to the given URL.
         """
         self.driver.get(url)
 
     def click(self, element):
         """
-        Click on the element with the given xpath.
+        Clicks on the element with the given xpath.
+        
+        Args (selenium.webdriver.remote.webelement.WebElement): to click on
         """
         time.sleep(random.random()/10**2)
         element.click()
     
     def getElement(self, xpath):
         """
-        Return the element with the given xpath.
+        Returns the element with the given xpath.
+        
+        Args (str): xpath of the element to return
+        
+        Returns (selenium.webdriver.remote.webelement.WebElement): element with the given xpath
         """
         WebDriverWait(self.driver, 40).until(EC.element_to_be_clickable((By.XPATH, xpath)))
         return self.driver.find_element(By.XPATH, xpath)
 
     def seleniumClick(self, element):
+        """
+        Waits for a random span of time and clicks on the given element.
+        If the element is not clickable, the function will try again 3 times.
+
+        Args:
+            element (selenium.webdriver.remote.webelement.WebElement): element to click on
+        """
         randomSleep()
         order_tries = 0
         while order_tries < 3:
@@ -108,8 +121,8 @@ class Driver:
         Send keys to the given entrybox.
 
         Args:
-            entrybox (): _description_
-            send_keys_arg (_type_): _description_
+            entrybox (selenium.webdriver.remote.webelement.WebElement): _description_
+            send_keys_arg: _description_
         """
         randomSleep()
         order_tries = 0
@@ -129,13 +142,13 @@ class Driver:
 
     def getCurrentURL(self):
         """
-        Return the current URL.
+        Returns the current URL.
         """
         return self.driver.current_url
 
 def randomSleep():
     """
-    Sleep for a random time.
+    Sleeps for a random span of time.
     """
     time.sleep(random.random()/10**2)
 
@@ -144,5 +157,5 @@ def randomSleep():
 if __name__ == "__main__":
     driver = Driver(show=True)
     driver.goTo("https://bandcamp.com")
-    driver.getElement('//*[@id="header-wrapper"]/div[1]/div[1]/div[1]/h2/a').click()
+    print(type(driver.getElement('//*[@id="header-wrapper"]/div[1]/div[1]/div[1]/h2/a')))
     

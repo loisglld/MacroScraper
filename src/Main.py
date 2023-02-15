@@ -13,6 +13,7 @@ It allows you to download all the albums of a band.
 #------------------------------------------------------------------------------#
 
 from MacroScrapper import MacroScrapper
+from Logs import Logs
 
 #------------------------------------------------------------------------------#
 
@@ -21,8 +22,11 @@ if __name__ == "__main__":
     import warnings
     warnings.filterwarnings("ignore", category=DeprecationWarning)
 
+    # Initialize the logs
+    logs = Logs()
+    
     # Create the MarcoScrapper
-    macroScrapper = MacroScrapper()
+    macroScrapper = MacroScrapper(logs)
     macroScrapper.start()
 
     # End of the program
