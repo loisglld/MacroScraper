@@ -30,7 +30,7 @@ MacroScrapper is a web scrapper for [Bandcamp](https://bandcamp.com) music. It i
 MacroScrapper is a project I made for my personal use. I wanted to download all the music from a Bandcamp artist page named [Macroblank](https://macroblank.bandcamp.com/). I didn't want to download the music one by one so I decided to make a script that would do it for me.
 That is why the script is named MacroScrapper.
 
-<img src='./images/probleme.png' width=100 align=right>
+<img src='./images/fonctionnement.png' width=100 align=right>
 
 ## **How does it work?**
 
@@ -88,7 +88,7 @@ Music
 
 ## How to use it?
 
-<img src=''>
+<img src='./images/probleme.png' width=100 align=right>
 
 This script will ask you to enter the artist name's album you want to download.
 > It is planned to make a GUI for the script. For now, it is a command line script.
