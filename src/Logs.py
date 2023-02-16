@@ -3,7 +3,7 @@
 """
 Logs.py
 
-Created on 2023-02-03
+Created on 2023-02-15
 Author: Loïs GALLAUD
 This scripts contains the Logs class.
 """
@@ -21,10 +21,7 @@ class Logs:
     """
     def __init__(self):
         """
-        Initialise les logs de l'application.
-        
-        Crée un fichier MacroLogs.log dans lequel se trouvera un
-        historique des actions réalisées lors de la session.
+        Constructor of the Logs class.
         """
         
         self.logLevel = logging.INFO # Configure log error level
@@ -51,6 +48,9 @@ class Logs:
         logging.basicConfig(filename=self.logPath, format=self.logFormat, datefmt=self.logDateFormat, level=self.logLevel)
     
     def refreshLogs(self):
+        """
+        Add to the log of the day the log of the passed session.
+        """
         # Actualize the log file
         now = datetime.datetime.now() # Current date and hour
         logOfTheDayNamePath = os.path.join(self.logOutPath, now.strftime("%d-%m-%Y.log"))

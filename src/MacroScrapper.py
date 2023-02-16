@@ -26,14 +26,14 @@ import time
 
 class MacroScrapper:
     version = "0.2.0"
-    def __init__(self):
+    def __init__(self, logs:Logs):
         """
         Constructor of the MacroScrapper class.
         """
         self.artist_name = input("IL EST IMPORTANT D'ECRIRE EXACTEMENT LE NOM DE L'ARTISTE\nEntrez le nom de l'artiste: ")
         
         self.WD = WorkingDirectory()
-        self.logs = Logs()
+        self.logs = logs
         self.proxies = Proxy()
         self.driver = Driver(self.proxies.proxies[0], show=True)
         
