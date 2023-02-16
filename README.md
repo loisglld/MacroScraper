@@ -1,7 +1,7 @@
 # **MacroScrapper**
 
 <div align=right>
-    <img src="./images/flingue1.png" alt="MacroScrapper logo" width="150" height="150" align="right">
+    <img src="./images/flingue1.png" alt="MacroScrapper logo" width="150" height="150" align="right" style="border-radius:20px;">
 </div>
 
 ## **Table of content**
@@ -38,7 +38,7 @@ The script will use the [Selenium](https://www.selenium.dev/) library to open a 
 
 Each album will be downloaded in a separate folder. The folder will be named after the album name. The album will be downloaded in a ``.zip`` file then extracted in the folder with the same name as the album.
 
-<img src='./images/bases-de-donnees.png' width=75 align=right>
+<img src='./images/bases-de-donnees.png' width=75 align=right style="margin:1vw;">
 
 ### **Saving data**
 
@@ -86,7 +86,7 @@ Music
 
 ---
 
-## How to use it?
+## **How to use it?**
 
 <img src='./images/probleme.png' width=100 align=right>
 
@@ -95,7 +95,7 @@ This script will ask you to enter the artist name's album you want to download.
 
 Just let it do the job. It will take a while depending on the number of albums the artist has.
 
-### Installation
+### **Installation**
 
 Python version 3.11.1 or higher is required.
 
@@ -104,7 +104,7 @@ Python version 3.11.1 or higher is required.
 
 > In future versions, I want to make a ``.exe`` file so you won't need to install Python.
 
-### Usage
+### **Usage**
 
 * Run the script with `python main.py`
 * Enter the name of the artist in the terminal.
@@ -115,7 +115,7 @@ Python version 3.11.1 or higher is required.
 
 <img src='./images/resolution-de-probleme.png' width=75 align=right>
 
-## How to contribute?
+## **How to contribute?**
 
 I develop the MacroScrapper alone: you can check more of my stuff [here](https://github.com/LOISGALLAUD). I welcome both pull requests and issues on [GitHub](https://github.com/LOISGALLAUD/MacroScrapper). I will review your pull request as soon as possible.
 
@@ -125,6 +125,6 @@ Thank you for your interest in MacroScrapper!
 
 <img src='./images/licence.png' width=75 align=right>
 
-## License
+## **License**
 
 MacroScrapper is licensed under the [Apashe 2.0 License].
