@@ -1,7 +1,7 @@
 # **MacroScrapper**
 
 <div align=right>
-    <img src="./images/flingue1.png" alt="MacroScrapper logo" width="150" height="150" align="right" style="border-radius:2.5vw;" />
+    <img src="./images/MacroLogo.png" alt="MacroScrapper logo" width="150" height="150" align="right" />
 </div>
 
 ## **Table of content**
