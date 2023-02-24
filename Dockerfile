@@ -1,14 +1,13 @@
-# Étape 1 : Utiliser une image Python officielle comme image de base
+# Step 1: Use an official Python image as a parent image
 FROM python:3.11
 
-# Étape 2 : Définir le répertoire de travail dans le conteneur
+# Step 2: Define the working directory in the container
 WORKDIR /app
 
-# Étape 3 : Copier le code de votre projet dans le conteneur
+# Step 3: Copy the code of your project into the container
 COPY . .
-
-# Étape 4 : Installer les dépendances de votre projet
+# Step 4: Install dependencies of your project
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Étape 5 : Définir le point d'entrée de votre application
-CMD [ "python", "./Main.py" ]
+# Step 5: Define the entry point of your application
+CMD [ "python", "./src/Main.py" ]

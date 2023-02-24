@@ -6,22 +6,32 @@
 
 ## **Table of content**
 
-* [What is MacroScrapper?](#what-is-macroscrapper)
-* [Where does it come from?](#where-does-it-come-from)
-* [How does it work?](#how-does-it-work)
+* [**What is MacroScrapper?**](#what-is-macroscrapper)
+* [**Where does it come from?**](#where-does-it-come-from)
+* [**How does it work?**](#how-does-it-work)
   * [Saving data](#saving-data)
   * [Directory structure](#directory-structure)
-* [Installation?](#installation)
+* [**How to use it?**](#how-to--use-it)
+  * [Usage](#usage)
+* [**Installation**](#installation)
   * [Prerequisites](#prerequisites)
   * [Installation of MacroScrapper](#installation-macro)
-* [How to contribute?](#how-to-contribute)
-* [License](#license)
+* [**How to contribute?**](#how-to-contribute)
+* [**License**](#license)
 
 ---
+
+<div id="what-is-macroscrapper">
 
 ## **What is MacroScrapper?**
 
 MacroScrapper is a web scrapper for [Bandcamp](https://bandcamp.com) music. It is a Python script that will download all the free music from a Bandcamp artist page, album after album, in your Music directory.
+
+</div>
+
+---
+
+<div id="where-does-it-come-from">
 
 ## **Where does it come from?**
 
@@ -32,6 +42,12 @@ That is why the script is named MacroScrapper.
 
 <img src='./images/fonctionnement.png' width=100 align=right>
 
+</div>
+
+---
+
+<div id="how-does-it-work">
+
 ## **How does it work?**
 
 The script will use the [Selenium](https://www.selenium.dev/) library to open a Chrome browser. It will then navigate to the Bandcamp artist page and click on the "Download" button of each album. The script will then repeat the process for each album.
@@ -39,8 +55,10 @@ The script will use the [Selenium](https://www.selenium.dev/) library to open a 
 Each album will be downloaded in a separate folder. The folder will be named after the album name. The album will be downloaded in a ``.zip`` file then extracted in the folder with the same name as the album.
 
 <img src='./images/bases-de-donnees.png' width=75 align=right style="margin:1vw;">
+</div>
+<div id="saving-data">
 
-### **Saving data**
+### Saving data
 
 It will create a ``.csv`` file with the name of the artist and the name of the album. The file will contain the following information:
 
@@ -65,7 +83,10 @@ I wanted to keep track of the music I downloaded. I also wanted to keep track of
 
 I like data processing so i'd like in the future to make a script that would read the ``.csv`` file and make graphs and statistics about the music I downloaded.
 
-### **Directory structure**
+</div>
+<div id="directory-structure">
+
+### Directory structure
 
 ```shell
 Music   
@@ -84,25 +105,23 @@ Music
     |___ ...
 ```
 
+</div>
+
 ---
 
-## **How to use it?**
+<div id="how-to--use-it">
 
 <img src='./images/probleme.png' width=100 align=right>
+
+## **How to use it?**
 
 This script will ask you to enter the artist name's album you want to download.
 > It is planned to make a GUI for the script. For now, it is a command line script.
 
 Just let it do the job. It will take a while depending on the number of albums the artist has.
 
-### **Installation**
-
-Python version 3.11.1 or higher is required.
-
-* Clone the repository
-* Install the requirements with ``pip install -r requirements.txt``
-
-> In future versions, I want to make a ``.exe`` file so you won't need to install Python.
+</div>
+<div id="usage">
 
 ### **Usage**
 
@@ -111,21 +130,13 @@ Python version 3.11.1 or higher is required.
 * Wait for the script to finish.
 * Retrieve the music in your Music folder.
 
----
-
-<img src='./images/resolution-de-probleme.png' width=75 align=right>
-
-## **How to contribute?**
-
-I develop the MacroScrapper alone: you can check more of my stuff [here](https://github.com/LOISGALLAUD). I welcome both pull requests and issues on [GitHub](https://github.com/LOISGALLAUD/MacroScrapper). I will review your pull request as soon as possible.
-
-Thank you for your interest in MacroScrapper!
+</div>
 
 ---
 
 <div id="installation">
 
-## **INSTALLATION**
+## **Installation**
 
 <div id="prerequisites">
 
@@ -164,6 +175,20 @@ Thanks to Docker, you won't need to install Python on your machine. You'll just 
 For more information about Docker, you can consult the [official documentation](https://docs.docker.com/) of Docker.
 
 </div>
+</div>
+
+---
+
+<div id="how-to-contribute">
+
+<img src='./images/resolution-de-probleme.png' width=75 align=right>
+
+## **How to contribute?**
+
+I develop the MacroScrapper alone: you can check more of my stuff [here](https://github.com/LOISGALLAUD). I welcome both pull requests and issues on [GitHub](https://github.com/LOISGALLAUD/MacroScrapper). I will review your pull request as soon as possible.
+
+Thank you for your interest in MacroScrapper!
+
 </div>
 
 ---
