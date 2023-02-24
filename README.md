@@ -11,9 +11,9 @@
 * [How does it work?](#how-does-it-work)
   * [Saving data](#saving-data)
   * [Directory structure](#directory-structure)
-* [How to use it?](#how-to-use-it)
-  * [Installation](#installation)
-  * [Usage](#usage)
+* [Installation?](#installation)
+  * [Prerequisites](#prerequisites)
+  * [Installation of MacroScrapper](#installation-macro)
 * [How to contribute?](#how-to-contribute)
 * [License](#license)
 
@@ -120,6 +120,51 @@ Python version 3.11.1 or higher is required.
 I develop the MacroScrapper alone: you can check more of my stuff [here](https://github.com/LOISGALLAUD). I welcome both pull requests and issues on [GitHub](https://github.com/LOISGALLAUD/MacroScrapper). I will review your pull request as soon as possible.
 
 Thank you for your interest in MacroScrapper!
+
+---
+
+<div id="installation">
+
+## **INSTALLATION**
+
+<div id="prerequisites">
+
+### **Prerequisites**
+
+You'll need [Docker](https://docs.docker.com/get-docker/) to be installed. Go to theiur website to download Docker. Then verify Docker has been correctly installed by running the following command in your terminal:
+
+```bash
+docker --version
+```
+
+If you get an error, it means **Docker is not installed**. If you get a version of Docker, it means you are **ready** to continue.
+
+Thanks to Docker, you won't need to install Python on your machine. You'll just have to follow the next steps.
+
+</div>
+<div id="installation-macro">
+
+### **Installation of MacroScrapper**
+
+1. Download the project archive on the [GitHub repository](https://github.com/LOISGALLAUD/MacroScrapper)
+2. Unzip the archive
+3. Open a terminal in the unzipped folder
+4. Run the following commands:
+
+    ```bash
+    docker build -t macro .
+    docker run -it macro
+    ```
+
+>What do these commands do?
+
+* `docker build -t macro .` : Build the Docker image from the `Dockerfile` present in the current folder. The `-t` option allows to give a name to the Docker image. Here, we give the name `macro` to the image.
+* `docker run -it macro` : Run a container from the `macro` image. The `-it` option allows to run the container in interactive mode. This allows to see the application logs in the terminal. This command executes the `main.py` file which launches the application.
+
+For more information about Docker, you can consult the [official documentation](https://docs.docker.com/) of Docker.
+
+</div>
+</div>
 
 ---
 
