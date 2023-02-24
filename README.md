@@ -135,6 +135,7 @@ Just let it do the job. It will take a while depending on the number of albums t
 ---
 
 <div id="installation">
+<img src="./images/docker-logo.png" align='right' width=120>
 
 ## **Installation**
 
