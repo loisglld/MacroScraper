@@ -6,13 +6,13 @@ Main.py
 Created on 2023-02-03
 Author: Loïs GALLAUD
 
-This program is a scrapper for Bandcamp. 
+This program is a Scraper for Bandcamp. 
 It allows you to download all the albums of a band.
 """
 
 #------------------------------------------------------------------------------#
 
-from MacroScrapper import MacroScrapper
+from MacroScraper import MacroScraper
 from Logs import Logs
 
 #------------------------------------------------------------------------------#
@@ -25,9 +25,9 @@ if __name__ == "__main__":
     # Initialize the logs
     logs = Logs()
     
-    # Create the MarcoScrapper
-    macroScrapper = MacroScrapper(logs)
-    macroScrapper.start()
+    # Create the MarcoScraper
+    macroScraper = MacroScraper(logs)
+    macroScraper.start()
 
     # End of the program
     print("End of the program.")

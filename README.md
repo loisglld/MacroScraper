@@ -1,12 +1,12 @@
-# **MacroScrapper**
+# **MacroScraper**
 
 <div align=right>
-    <img src="./images/MacroLogo.png" alt="MacroScrapper logo" width="150" height="150" align="right" />
+    <img src="./images/MacroLogo.png" alt="MacroScraper logo" width="150" height="150" align="right" />
 </div>
 
 ## **Table of content**
 
-* [**What is MacroScrapper?**](#what-is-macroscrapper)
+* [**What is MacroScraper?**](#what-is-macroScraper)
 * [**Where does it come from?**](#where-does-it-come-from)
 * [**How does it work?**](#how-does-it-work)
   * [Saving data](#saving-data)
@@ -15,17 +15,17 @@
   * [Usage](#usage)
 * [**Installation**](#installation)
   * [Prerequisites](#prerequisites)
-  * [Installation of MacroScrapper](#installation-macro)
+  * [Installation of MacroScraper](#installation-macro)
 * [**How to contribute?**](#how-to-contribute)
 * [**License**](#license)
 
 ---
 
-<div id="what-is-macroscrapper">
+<div id="what-is-macroScraper">
 
-## **What is MacroScrapper?**
+## **What is MacroScraper?**
 
-MacroScrapper is a web scrapper for [Bandcamp](https://bandcamp.com) music. It is a Python script that will download all the free music from a Bandcamp artist page, album after album, in your Music directory.
+MacroScraper is a web Scraper for [Bandcamp](https://bandcamp.com) music. It is a Python script that will download all the free music from a Bandcamp artist page, album after album, in your Music directory.
 
 </div>
 
@@ -37,8 +37,8 @@ MacroScrapper is a web scrapper for [Bandcamp](https://bandcamp.com) music. It i
 
 ![Macroblank Bandcamp banner](./images/macro-banner.png)
 
-MacroScrapper is a project I made for my personal use. I wanted to download all the music from a Bandcamp artist page named [Macroblank](https://macroblank.bandcamp.com/). I didn't want to download the music one by one so I decided to make a script that would do it for me.
-That is why the script is named MacroScrapper.
+MacroScraper is a project I made for my personal use. I wanted to download all the music from a Bandcamp artist page named [Macroblank](https://macroblank.bandcamp.com/). I didn't want to download the music one by one so I decided to make a script that would do it for me.
+That is why the script is named MacroScraper.
 
 <img src='./images/fonctionnement.png' width=100 align=right>
 
@@ -75,7 +75,7 @@ It will also create a ``.txt`` file with the name of the artist and the name of 
 * Artist name
 * Album tracklist
 
-The project will download the music in yout Music folder. It will create a folder named MacroScrapper and then create a folder named after the artist's name. The folder will contain all the albums downloaded as zip files, the ``.csv`` and ``.txt`` files.
+The project will download the music in yout Music folder. It will create a folder named MacroScraper and then create a folder named after the artist's name. The folder will contain all the albums downloaded as zip files, the ``.csv`` and ``.txt`` files.
 
 > Why do I want to stock data?
 
@@ -91,7 +91,7 @@ I like data processing so i'd like in the future to make a script that would rea
 ```shell
 Music   
 .
-|___ MacroScrapper
+|___ MacroScraper
     |___ Artist1
         |___ Album1
         |___ Album2
@@ -156,9 +156,9 @@ Thanks to Docker, you won't need to install Python on your machine. You'll just 
 </div>
 <div id="installation-macro">
 
-### **Installation of MacroScrapper**
+### **Installation of MacroScraper**
 
-1. Download the project archive on the [GitHub repository](https://github.com/LOISGALLAUD/MacroScrapper)
+1. Download the project archive on the [GitHub repository](https://github.com/LOISGALLAUD/MacroScraper)
 2. Unzip the archive
 3. Open a terminal in the unzipped folder
 4. Run the following commands:
@@ -186,9 +186,9 @@ For more information about Docker, you can consult the [official documentation](
 
 ## **How to contribute?**
 
-I develop the MacroScrapper alone: you can check more of my stuff [here](https://github.com/LOISGALLAUD). I welcome both pull requests and issues on [GitHub](https://github.com/LOISGALLAUD/MacroScrapper). I will review your pull request as soon as possible.
+I develop the MacroScraper alone: you can check more of my stuff [here](https://github.com/LOISGALLAUD). I welcome both pull requests and issues on [GitHub](https://github.com/LOISGALLAUD/MacroScraper). I will review your pull request as soon as possible.
 
-Thank you for your interest in MacroScrapper!
+Thank you for your interest in MacroScraper!
 
 </div>
 
@@ -198,4 +198,4 @@ Thank you for your interest in MacroScrapper!
 
 ## **License**
 
-MacroScrapper is licensed under the [Apashe 2.0 License].
+MacroScraper is licensed under the [Apashe 2.0 License].

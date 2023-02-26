@@ -20,7 +20,7 @@ import pandas as pd
 
 class Proxy:
     """
-    This class represents the Proxy the MacroScrapper will use to navigate on bandcamp.
+    This class represents the Proxy the MacroScraper will use to navigate on bandcamp.
     """
     def __init__(self):
         """

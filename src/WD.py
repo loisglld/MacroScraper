@@ -21,7 +21,7 @@ class WorkingDirectory:
     
     Music   
     .
-    |___ MacroScrapper
+    |___ MacroScraper
         |___ Artist
             |___ Album1
             |___ Album2
@@ -32,9 +32,9 @@ class WorkingDirectory:
         """
         Constructor of the WorkingDirectory class.
         """
-        self.path = os.path.join(os.environ['USERPROFILE'], "Music\\MacroScrapper\\")
+        self.path = os.path.join(os.environ['USERPROFILE'], "Music\\MacroScraper\\")
         self.downloadsPath = os.path.join(os.environ['USERPROFILE'], "Downloads\\")
-        # Crée le dossier MacroScrapper dans le dossier Musique de l'utilisateur
+        # Crée le dossier MacroScraper dans le dossier Musique de l'utilisateur
         if not os.path.exists(self.path): os.makedirs(self.path)
 
     def createArtistDir(self, artist):

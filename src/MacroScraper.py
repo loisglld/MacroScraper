@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 """
-MacroScrapper.py
+MacroScraper.py
 
 Created on 2023-02-03
 Author: Loïs GALLAUD
-This scripts contains the MarcoScrapper class.
+This scripts contains the MarcoScraper class.
 """
 
 #------------------------------------------------------------------------------#
@@ -24,11 +24,11 @@ import time
 
 #------------------------------------------------------------------------------#
 
-class MacroScrapper:
+class MacroScraper:
     version = "0.2.0"
     def __init__(self, logs:Logs):
         """
-        Constructor of the MacroScrapper class.
+        Constructor of the MacroScraper class.
         """
         self.artist_name = input("IL EST IMPORTANT D'ECRIRE EXACTEMENT LE NOM DE L'ARTISTE\nEntrez le nom de l'artiste: ")
         
@@ -37,7 +37,7 @@ class MacroScrapper:
         self.proxies = Proxy()
         self.driver = Driver(self.proxies.proxies[0], show=True)
         
-        self.logs.log.info(f"The MacroScrapper {MacroScrapper.version} has been launched.")
+        self.logs.log.info(f"The MacroScraper {MacroScraper.version} has been launched.")
         
     def start(self):
         """
